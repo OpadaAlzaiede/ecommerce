@@ -9,6 +9,11 @@ return [
         'add' => 'Category Added Successfully',
         'update' => 'Category Updated Successfully',
         'delete' => 'Category Deleted Successfully'
+    ],
+    'BRAND' => [
+        'add' => 'Brand Added Successfully',
+        'update' => 'Brand Updated Successfully',
+        'delete' => 'Brand Deleted Successfully'
     ]
 ];
 ?>

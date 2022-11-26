@@ -23,7 +23,10 @@ class CategoryController extends Controller
 
     public function store(StoreRequest $request) {
 
-        $category = new Category($request->except('image'));
+        //return $request;
+        $category = new Category($request->except(['image', 'status']));
+
+        $category->status = $request->status ? '1' : '0';
 
         if($request->hasFile('image')) {
 
@@ -48,7 +51,10 @@ class CategoryController extends Controller
 
     public function update(UpdateRequest $request, Category $category) {
 
-        $category->update($request->except('image'));
+        $category->update($request->except(['image', 'status']));
+
+        $category->status = $request->status ? '1' : '0';
+        $category->save();
 
         if($request->hasFile('image')) {
 

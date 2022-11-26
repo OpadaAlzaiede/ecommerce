@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="status">Status</label>
-                            <input type="checkbox" name="status" {{ $category->status == '0' ? 'checked' : '' }} />
+                            <input type="checkbox" name="status" {{ $category->status == '1' ? 'checked' : '' }} />
                         </div>
                         <div class="col-md-12 mb-3">
                             <label for="meta_title">Meta Title</label>
